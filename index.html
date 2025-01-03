@@ -1,29 +1,58 @@
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <style>
-      body {
-        margin: 0;
-        height: 100%;
-        --background: linear-gradient(
-        --  135deg,
-        --  white 0%,
-        --  white 49%,
-        --  black 49%,
-        --  black 51%,
-        --  white 51%,
-        --  white 100%
-        --);
-        --/*background-repeat: repeat;*/
-        --background-size: 20px 20px;
-      }
-      canvas {
-        background-color: white;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <title>Owlkaline's Website</title>
   </head>
-  <script type="module">
-    import init from './wasm_example.js'
-    init()
-  </script>
+  <body>
+    <div id="FlexParent" class="flex-container">
+      <h1 id="MainTitle">Owlkaline</h1>
+
+      <div id="LinkTitle" , class="flex-container">
+        <h2>Social Links</h2>
+        <div id="LinkContainer" class="flex-container">
+          <a id="ImageLinkRow" href="https://twitch.tv/owlkalinevt" class="flex-container">
+            <img width="40" height="40" src="./assets/twitch.png" alt="" />
+            Twitch
+          </a>
+          <a id="ImageLinkRow" href="https://bsky.app/profile/owlkalinevt.bsky.social">
+            <img width="40" height="40" src="./assets/bluesky.png" alt="" />
+            Bluesky
+          </a>
+          <a id="ImageLinkRow" href="https://github.com/Owlkaline">
+            <img width="40" height="40" src="./assets/github.png" alt="" />
+            Github
+          </a>
+          <a id="ImageLinkRow" href="https://discord.gg/XD3aRRveka">
+            <img width="40" height="40" src="./assets/discord.png" alt="" />
+            Discord
+          </a>
+          <a id="ImageLinkRow" href="https://www.youtube.com/@owlkalinevt/videos">
+            <img width="40" height="28" src="./assets/youtube.png" alt="" />
+            Main Channel
+          </a>
+          <a id="ImageLinkRow" href="https://www.youtube.com/@owlkalinevods/videos">
+            <img width="40" height="28" src="./assets/youtube.png" alt="" />
+            Vods Channel
+          </a>
+        </div>
+      </div>
+      <div id="TwitchEmbed" class="flex-container"></div>
+      <script type="text/javascript">
+        new Twitch.Embed("TwitchEmbed", {
+          width: 854 * 0.75,
+          height: 480 * 0.75,
+          channel: "Owlkalinevt",
+          autoplay: false,
+          muted: true,
+          layout: "video",
+          // Only needed if this page is going to be embedded on other websites
+          //parent: ["127.0.0.1"],
+        });
+      </script>
+    </div>
+  </body>
+  <footer></footer>
 </html>
