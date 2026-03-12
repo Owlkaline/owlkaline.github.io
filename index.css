@@ -1,0 +1,67 @@
+body {
+  background-color: #2f2f2f;
+  background-image: url("assets/bubbles0.png"); /*Under_construction_graphic.gif);*/
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+body a {
+  color: pink;
+}
+
+body a:hover {
+  position: relative;
+  bottom: 3px;
+}
+
+#MainTitle {
+  /*  color: #f0f0f0;*/
+  color: #65366b; /*#000000;*/
+  font-size: 72px;
+  -webkit-text-stroke: 2px magenta;
+}
+
+#FlexParent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 20px;
+}
+
+#TwitchEmbed {
+  display: flex;
+  background-image: url("assets/Under_construction_graphic.gif");
+  /* place image here for when twitch embed is loading
+  */
+  justify-self: flex-end;
+}
+
+#LinkTitle {
+  background-color: #adadad;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2%;
+}
+
+#LinkContainer {
+  padding: 20px;
+  background-color: #3c3c3c;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  border-radius: 2%;
+}
+
+#ImageLinkRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 8px;
+}
