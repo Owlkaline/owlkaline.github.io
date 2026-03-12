@@ -31,14 +31,6 @@ body a:hover {
   row-gap: 20px;
 }
 
-#TwitchEmbed {
-  display: flex;
-  background-image: url("assets/Under_construction_graphic.gif");
-  /* place image here for when twitch embed is loading
-  */
-  justify-self: flex-end;
-}
-
 #LinkTitle {
   background-color: #adadad;
   width: 50%;
@@ -46,6 +38,13 @@ body a:hover {
   flex-direction: column;
   align-items: center;
   border-radius: 2%;
+}
+
+#GamesBox {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
 #LinkContainer {
@@ -64,4 +63,14 @@ body a:hover {
   align-items: center;
   justify-content: flex-start;
   column-gap: 8px;
+}
+
+#TwitchEmbed {
+  display: flex;
+  background-image: url("assets/Under_construction_graphic.gif");
+  /* place image here for when twitch embed is loading
+  */
+  justify-self: flex-end;
+  margin: 20px;
+  margin-top: 0px;
 }

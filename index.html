@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="index.css" />
@@ -17,6 +17,11 @@
             <img width="40" height="40" src="./assets/twitch.png" alt="" />
             Twitch
           </a>
+          <a id="ImageLinkRow" href="https://owlkalinevt.itch.io" class="flex-container">
+            <img width="40" height="40" src="./assets/itchio-textless-black.svg" alt="" />
+            Itch.io
+          </a>
+
           <a id="ImageLinkRow" href="https://bsky.app/profile/owlkalinevt.bsky.social">
             <img width="40" height="40" src="./assets/bluesky.png" alt="" />
             Bluesky
@@ -37,11 +42,25 @@
             <img width="40" height="28" src="./assets/youtube.png" alt="" />
             Vods Channel
           </a>
-          <a id="ImageLinkRow", href="http://ko-fi.com/owlkaline/tiers">
-            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'T6T1S1CMK');kofiwidget2.draw();</script> 
+          <a id="ImageLinkRow" , href="http://ko-fi.com/owlkaline/tiers">
+            <script
+              type="text/javascript"
+              src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
+            ></script>
+            <script type="text/javascript">
+              kofiwidget2.init("Support me on Ko-fi", "#72a4f2", "T6T1S1CMK");
+              kofiwidget2.draw();
+            </script>
           </a>
+          <h2 style="color: burlywood;">Games</h2>
+          <iframe frameborder="0" src="https://itch.io/embed/3975106?linkback=true" width="552" height="167"><a href="https://owlkalinevt.itch.io/bunnies-vs-aliens">Bunnies Vs Aliens by Owlkaline</a></iframe>
+          <iframe frameborder="0" src="https://itch.io/embed/3975106" width="552" height="167"
+            ><a href="https://owlkalinevt.itch.io/bunnies-vs-aliens"
+              >Bunnies Vs Aliens by Owlkaline</a
+            ></iframe
         </div>
       </div>
+      <h2>My Twitch Stream<h2>
       <div id="TwitchEmbed" class="flex-container"></div>
       <script type="text/javascript">
         new Twitch.Embed("TwitchEmbed", {
@@ -57,15 +76,15 @@
       </script>
     </div>
 
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-      <script>
-        kofiWidgetOverlay.draw('owlkaline', {
-          'type': 'floating-chat',
-          'floating-chat.donateButton.text': 'Support me',
-          'floating-chat.donateButton.background-color': '#00b9fe',
-          'floating-chat.donateButton.text-color': '#fff'
-        });
-      </script>
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <script>
+      kofiWidgetOverlay.draw("owlkaline", {
+        type: "floating-chat",
+        "floating-chat.donateButton.text": "Support me",
+        "floating-chat.donateButton.background-color": "#00b9fe",
+        "floating-chat.donateButton.text-color": "#fff",
+      });
+    </script>
   </body>
   <footer></footer>
 </html>
