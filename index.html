@@ -58,6 +58,55 @@
               >Bunnies Vs Aliens by Owlkaline</a
             ></iframe
         </div>
+        <button type="button" class="collapsible">My Art</button>
+        <div class="art" style="color: burlywood;">
+
+          <div class="image_column">
+            <div class="big_img_container">
+              <!-- Close the image -->
+              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+              <!-- Expanded image -->
+              <img id="expandedImg" style="width:100%">
+            </div>
+            <img src="assets/art/owl.png" onclick="makeImgBig(this);">
+            <img src="assets/art/AoADay11.png" onclick="makeImgBig(this);">
+            <img src="assets/art/astatin_wanted_full_dumb.png" onclick="makeImgBig(this);">
+            <img src="assets/art/buff_frog.png" onclick="makeImgBig(this);">
+            <img src="assets/art/darkkittywinged.png" onclick="makeImgBig(this);">
+            <img src="assets/art/darktoxic.png" onclick="makeImgBig(this);">
+            <img src="assets/art/dino_nuggie.png" onclick="makeImgBig(this);">
+            <img src="assets/art/grimenvolope.png" onclick="makeImgBig(this);">
+            <img src="assets/art/magumin_hat_soul.png" onclick="makeImgBig(this);">
+            <img src="assets/art/pumpkinfimsheat.png" onclick="makeImgBig(this);">
+            <img src="assets/art/spaceproject.png" onclick="makeImgBig(this);">
+          </div>
+        </div>
+        <script>
+        function makeImgBig(imgs) {
+          // Get the expanded image
+          var expandImg = document.getElementById("expandedImg");
+          // Use the same src in the expanded image as the image being clicked on from the grid
+          expandImg.src = imgs.src;
+          // Show the container element (hidden with CSS)
+          expandImg.parentElement.style.display = "block";
+        }
+
+
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+               if (content.style.display === "flex") {
+                 content.style.display = "none";
+               } else {
+                 content.style.display = "flex";
+               }
+          });
+        }
+        </script>
       </div>
       <h2>My Twitch Stream<h2>
       <div id="TwitchEmbed" class="flex-container"></div>
