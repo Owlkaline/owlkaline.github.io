@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
 body {
   background-color: #2f2f2f;
-  background-image: url("assets/bubbles0.png"); /*Under_construction_graphic.gif);*/
+  background-image: url("./assets/bg.png"); /*Under_construction_graphic.gif);*/
   background-repeat: repeat;
-  background-size: 100%;
 }
 
 body a {
@@ -14,11 +15,46 @@ body a:hover {
   bottom: 3px;
 }
 
-#MainTitle {
+#MainTitle, section, nav {
   /*  color: #f0f0f0;*/
   color: #65366b; /*#000000;*/
-  font-size: 72px;
-  -webkit-text-stroke: 2px magenta;
+  background-color: #502f66;
+  border-radius: 20px;
+  padding: 8px;
+  font-family: "Playpen Sans", cursive;
+  font-weight: bold;
+  border: 5px solid #833d85;
+  width: 830px;
+  box-shadow: 3px 3px 0 #e4c4e5, -3px 3px 0 #e4c4e5, 3px -3px 0 #e4c4e5, -3px -3px 0 #e4c4e5;
+  text-align: center;
+}
+
+#MainTitle {
+  margin-top: 30px;
+}
+
+#MainTitle, nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* #MainTitle::before {
+/* 	content:'';
+/* 	width:856px;
+/* 	height:154px;
+/* 	position: absolute;
+/* 	margin-top: -1px;
+/* 	margin-left: -16px;
+/*   	border: 3px solid #e4c4e5;
+/*   	border-radius: 24px;
+/* 	z-index:-1;
+/* 	background-color:#e4c4e5;
+/* } */
+
+#MainTitle #logo {
+	position: relative;
+	margin-top:-30px;
 }
 
 #FlexParent {
@@ -38,6 +74,8 @@ body a:hover {
   flex-direction: column;
   align-items: center;
   border-radius: 2%;
+  max-width: 750px;
+  min-width: 750px;
 }
 
 #GamesBox {
@@ -47,10 +85,10 @@ body a:hover {
   text-align: center;
 }
 
-#LinkContainer {
+#InnerDiv {
+  background-color: #3c3c3c;
   padding: 20px;
   background-color: #3c3c3c;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,11 +96,24 @@ body a:hover {
   border-radius: 2%;
 }
 
+#LinkContainer {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 2%;
+}
+
 #ImageLinkRow {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   column-gap: 8px;
+  background-color: #8e6ea9;
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
 }
 
 #TwitchEmbed {
@@ -73,6 +124,11 @@ body a:hover {
   justify-self: flex-end;
   margin: 20px;
   margin-top: 0px;
+}
+
+#TwitchContainer {
+  background-color: palevioletred;
+  display: flex;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -96,11 +152,41 @@ body a:hover {
 
 /* Style the collapsible content. Note: hidden by default */
 .art {
-  display: none;
   padding: 0 18px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+}
+
+.art img {
+	width: 200px;
+  	border: 3px solid #e4c4e5;
+}
+
+body:not(.no-js) .art img:not(.big) {
+	cursor: pointer;
+}
+
+.art img.big {
+	height: calc(100vh - 40px);
+	width: auto;
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+#dark-overlay {
+	display: none;
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #00000080;
+	z-index: 1;
+	transition: 0.5s;
 }
 
 .image_column {
@@ -138,4 +224,26 @@ body a:hover {
   color: white;
   font-size: 35px;
   cursor: pointer;
+}
+
+#GameGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+section h2 {
+	color: white;
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 30px;
+	text-decoration: underline;
+	text-decoration-thickness: 3px;
+}
+
+#GameGrid iframe {
+	border-radius: 15px;
 }

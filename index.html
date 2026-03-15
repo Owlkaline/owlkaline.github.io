@@ -4,15 +4,19 @@
     <link rel="stylesheet" href="index.css" />
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-    <title>Owlkaline's Website</title>
+    <title>Owlkaline's Website </title>
   </head>
-  <body>
+  <body class="no-js">
+	  <div id="dark-overlay" onclick="makeImgSmall();"></div>
     <div id="FlexParent" class="flex-container">
-      <h1 id="MainTitle">Owlkaline</h1>
+      <div id="MainTitle">
+        <img width="128" height="128" src="./assets/OwlWalkie.gif"></img>
+		<img id="logo" width="550" src="./assets/logo.png" />
+        <img  width="128" height="128"src="./assets/OwlWalkie.gif"></img>
+      </div>
 
-      <div id="LinkTitle" , class="flex-container">
-        <h2>Social Links</h2>
-        <div id="LinkContainer" class="flex-container">
+	  <nav>
+		<div id="LinkContainer" class="flex-container">
           <a id="ImageLinkRow" href="https://twitch.tv/owlkalinevt" class="flex-container">
             <img width="40" height="40" src="./assets/twitch.png" alt="" />
             Twitch
@@ -36,103 +40,60 @@
           </a>
           <a id="ImageLinkRow" href="https://www.youtube.com/@owlkalinevt/videos">
             <img width="40" height="28" src="./assets/youtube.png" alt="" />
-            Main Channel
+            Youtube
           </a>
-          <a id="ImageLinkRow" href="https://www.youtube.com/@owlkalinevods/videos">
-            <img width="40" height="28" src="./assets/youtube.png" alt="" />
-            Vods Channel
-          </a>
-          <a id="ImageLinkRow" , href="http://ko-fi.com/owlkaline/tiers">
-            <script
-              type="text/javascript"
-              src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
-            ></script>
-            <script type="text/javascript">
-              kofiwidget2.init("Support me on Ko-fi", "#72a4f2", "T6T1S1CMK");
-              kofiwidget2.draw();
-            </script>
-          </a>
-          <h2 style="color: burlywood;">Games</h2>
-          <iframe frameborder="0" src="https://itch.io/embed/3975106" width="552" height="167"
-            ><a href="https://owlkalinevt.itch.io/bunnies-vs-aliens"
-              >Bunnies Vs Aliens by Owlkaline</a
-            ></iframe
         </div>
-        <button type="button" class="collapsible">My Art</button>
-        <div class="art" style="color: burlywood;">
 
-          <div class="image_column">
-            <div class="big_img_container">
-              <!-- Close the image -->
-              <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-              <!-- Expanded image -->
-              <img id="expandedImg" style="width:100%">
-            </div>
-            <img src="assets/art/owl.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/AoADay11.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/astatin_wanted_full_dumb.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/buff_frog.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/darkkittywinged.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/darktoxic.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/dino_nuggie.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/grimenvolope.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/magumin_hat_soul.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/pumpkinfimsheat.png" onclick="makeImgBig(this);" loading="lazy">
-            <img src="assets/art/spaceproject.png" onclick="makeImgBig(this);" loading="lazy">
-          </div>
+	  </nav>
+	  <section>
+		<h2>Games</h2>
+		<div id="GameGrid">
+			<iframe frameborder="0" src="https://itch.io/embed/4375273?bg_color=8e6ea9&amp;fg_color=ffffff&amp;link_color=5b98fa&amp;border_color=8e6ea9" width="552" height="167"><a href="https://owlkalinevt.itch.io/long-fimsh">Long Fimsh by Owlkaline</a></iframe>
+			<iframe frameborder="0" src="https://itch.io/embed/3975106?bg_color=8e6ea9&amp;fg_color=ffffff&amp;link_color=63c64d&amp;border_color=8e6ea9" width="552" height="167"><a href="https://owlkalinevt.itch.io/bunnies-vs-aliens">Bunnies Vs Aliens by Owlkaline, Astatin</a></iframe>
         </div>
-        <script>
-        function makeImgBig(imgs) {
-          // Get the expanded image
-          var expandImg = document.getElementById("expandedImg");
-          // Use the same src in the expanded image as the image being clicked on from the grid
-          expandImg.src = imgs.src;
-          // Show the container element (hidden with CSS)
-          expandImg.parentElement.style.display = "block";
-        }
+	  </section>
+	  <section>
+		  <h2>Art</h2>
+		  <div class="art">
+			<img src="assets/art/owl_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/AoADay11_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/astatin_wanted_full_dumb_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/buff_frog_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/darkkittywinged_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/darktoxic_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/dino_nuggie_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/grimenvolope_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/magumin_hat_soul_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/pumpkinfimsheat_preview.png" onclick="makeImgBig(this);" loading="lazy">
+          	<img src="assets/art/spaceproject_preview.png" onclick="makeImgBig(this);" loading="lazy">
 
+		  </div>
+	  </section>
+  </div>
+  <script>
+	  document.body.className = "";
+	  function makeImgBig(img) {
+		  img.className = "big"
+		  img.src = img.src.replace("_preview.png", ".png")
+		  bigImage = img
+		  document.getElementById("dark-overlay").style = "display: block;";
+	  }
 
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-               if (content.style.display === "flex") {
-                 content.style.display = "none";
-               } else {
-                 content.style.display = "flex";
-               }
-          });
-        }
-        </script>
-      </div>
-      <h2>My Twitch Stream<h2>
-      <div id="TwitchEmbed" class="flex-container"></div>
-      <script type="text/javascript">
-        new Twitch.Embed("TwitchEmbed", {
-          width: 854 * 0.75,
-          height: 480 * 0.75,
-          channel: "Owlkalinevt",
-          autoplay: false,
-          muted: true,
-          layout: "video",
-          // Only needed if this page is going to be embedded on other websites
-          //parent: ["127.0.0.1"],
-        });
-      </script>
-    </div>
-
-    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
-    <script>
-      kofiWidgetOverlay.draw("owlkaline", {
-        type: "floating-chat",
-        "floating-chat.donateButton.text": "Support me",
-        "floating-chat.donateButton.background-color": "#00b9fe",
-        "floating-chat.donateButton.text-color": "#fff",
-      });
-    </script>
-  </body>
-  <footer></footer>
+	  function makeImgSmall() {
+		  bigImage.className = "";
+		  bigImage.src = bigImage.src.replace(".png", "_preview.png")
+		  document.getElementById("dark-overlay").style = "display: none;";
+	  }
+  </script>
+  <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+  <script>
+    kofiWidgetOverlay.draw("owlkaline", {
+      type: "floating-chat",
+      "floating-chat.donateButton.text": "Support me",
+      "floating-chat.donateButton.background-color": "#00b9fe",
+      "floating-chat.donateButton.text-color": "#fff",
+    });
+  </script>
+</body>
+<footer></footer>
 </html>
